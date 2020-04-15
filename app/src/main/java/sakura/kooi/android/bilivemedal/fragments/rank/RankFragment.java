@@ -56,6 +56,7 @@ public class RankFragment extends Fragment {
         String roomString = editRoom.getText().toString().trim();
         if (roomString.isEmpty()) {
             new AlertDialog.Builder(MainActivity.context).setMessage("你是不是忘了输入什么?").setNeutralButton("我有问题", (dialogInterface, i) -> {}).show();
+            return;
         }
         final long room;
         try {
